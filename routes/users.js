@@ -40,7 +40,7 @@ router.post(
         email,
         password,
       });
-      //salt is require to encrypt the password
+      //salt is required to encrypt the password
       const salt = await bcrypt.genSalt(10);
 
       user.password = await bcrypt.hash(password, salt);
